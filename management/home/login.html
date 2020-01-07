@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- begin::Head -->
+<head>
+    <meta charset="utf-8" />
+    <title>centre</title>
+    <meta name="description" content="Latest updates and statistic charts">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+
+    <!--end::Web font -->
+
+    <!--begin::Base Styles -->
+    <link href="../../assets/theme/default/vendors/base/vendors.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="../../assets/theme/default/vendors/base/style.bundle.css" rel="stylesheet" type="text/css" />
+    <!--end::Base Styles -->
+    <link rel="shortcut icon" href="../../assets/custom/images/logo/favicon.ico" />
+
+    <style>
+
+        html, body {
+            font-size: 1rem;
+        }
+
+        .m-login.m-login--2.m-login-2--skin-2 .m-login__container .m-login__form .form-control {
+            color: #ebedf2;
+            background: #ffffff;
+        }
+
+       .m-login__container .form-control {
+            display: block;
+            width: 100%;
+            height: calc(3.65rem + 2px);
+            padding: 1rem 1.15rem;
+            font-size: 1rem;
+            line-height: 1.35;
+            color: #495057;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            border-radius: 0.25rem;
+            -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+            transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+            transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+            transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+        }
+    </style>
+
+</head>
+
+<!-- end::Head -->
+
+<!-- begin::Body -->
+<body class="m--skin- m-header--fixed m-header--fixed-mobile m-aside-left--enabled m-aside-left--skin-dark m-aside-left--fixed m-aside-left--offcanvas m-footer--push m-aside--offcanvas-default">
+
+<!-- begin:: Page -->
+<div class="m-grid m-grid--hor m-grid--root m-page">
+    <div class="m-grid__item m-grid__item--fluid m-grid m-grid--hor m-login m-login--signin m-login--2 m-login-2--skin-2" id="m_login" style="background-image: url(../../assets/custom/images/login/bg-3.jpg);">
+        <div class="m-grid__item m-grid__item--fluid	m-login__wrapper">
+            <div class="m-login__container">
+                <div class="m-login__logo">
+                    <a href="#">
+                        <img src="../../assets/custom/images/logo/logo-1.png">
+                    </a>
+                </div>
+                <div class="m-login__signin">
+                    <form class="m-login__form m-form" id="user-login-form">
+                        <div class="input-group m-input-group m-input-group--square">
+                            <div class="m-input-icon m-input-icon--left">
+                                <input class="form-control m-input" type="text" placeholder="用户名" name="userAccount" id="user_account" autocomplete="off">
+                                <span class="m-input-icon__icon m-input-icon__icon--left">
+                                    <span>
+                                        <i class="la la-user"></i>
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="input-group m-input-group m-input-group--square" style="padding-top: 15px;">
+                            <div class="m-input-icon m-input-icon--left">
+                                <input class="form-control m-input m-login__form-input--last" type="password" placeholder="密码" name="userPassword" id="user_password" autocomplete="off" >
+                                <span class="m-input-icon__icon m-input-icon__icon--left">
+                                    <span>
+                                        <i class="la la-lock"></i>
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="row m-login__form-sub">
+                            <div class="col m--align-left m-login__form-left">
+                                <label class="m-checkbox  m-checkbox--focus">
+                                    <input type="checkbox" name="remember"> 记住我
+                                    <span></span>
+                                </label>
+                            </div>
+                            <div class="col m--align-right m-login__form-right">
+                                <a href="javascript:;" id="m_login_forget_password" class="m-link">忘记密码 ?</a>
+                            </div>
+                        </div>
+                        <div class="m-login__form-action">
+                            <button  type="button" id="m_login_signin_submit" class="btn btn-focus m-btn m-btn--pill m-btn--custom m-btn--air m-login__btn m-login__btn--primary">登录</button>
+                            <!--<button type="button" id="m_login_signin_button" class="btn btn-focus m-btn m-btn&#45;&#45;pill m-btn&#45;&#45;custom m-btn&#45;&#45;air m-login__btn m-login__btn&#45;&#45;primary m-loader m-loader&#45;&#45;light m-loader&#45;&#45;left">
+                                正在登录.....
+                            </button>-->
+                        </div>
+                    </form>
+                </div>
+                <div class="m-login__forget-password">
+                    <div class="m-login__head">
+                        <h3 class="m-login__title">忘记密码 ?</h3>
+                        <div class="m-login__desc">输入您的电子邮件重置您的密码:</div>
+                    </div>
+                    <form class="m-login__form m-form" id="user-pwd-form">
+                        <div class="input-group m-input-group m-input-group--square">
+                            <div class="m-input-icon m-input-icon--left">
+                                <input class="form-control m-input" type="text" placeholder="电子邮箱" name="userMailbox" id="m_email" autocomplete="off">
+                                <span class="m-input-icon__icon m-input-icon__icon--left">
+                                    <span>
+                                        <i class="la la-envelope"></i>
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="m-login__form-action">
+                            <button id="m_login_forget_password_submit" class="btn btn-focus m-btn m-btn--pill m-btn--custom m-btn--air  m-login__btn m-login__btn--primaryr">提交</button>&nbsp;&nbsp;
+                            <button id="m_login_forget_password_cancel" class="btn btn-outline-focus m-btn m-btn--pill m-btn--custom m-login__btn">取消</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- end:: Page -->
+
+<!--begin::Base Scripts -->
+<script type="text/javascript" src="../../assets/custom/plugins/jquery/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="../../assets/theme/default/vendors/base/vendors.bundle.js"></script>
+<script type="text/javascript" src="../../assets/theme/default/vendors/base/scripts.bundle.js"></script>
+<script type="text/javascript" src="../../assets/custom/plugins/jquery/jquery-cookie/jquery.cookie.js"></script>
+<script type="text/javascript" src="../../assets/custom/plugins/jquery/jquery.serializejson.min.js"></script>
+<script type="text/javascript" src="../../assets/custom/plugins/jquery/jquery.form.format.js"></script>
+<script type="text/javascript" src = "../../assets/custom/plugins/jsencrypt/aes.js"></script>
+<script type="text/javascript" src = "../../assets/custom/plugins/jsencrypt/crypto-js.js"></script>
+<script type="text/javascript" src = "../../assets/custom/plugins/jsencrypt/mode-ecb.js"></script>
+<script type="text/javascript" src = "../../assets/custom/plugins/jsencrypt/pad-zeropadding.js"></script>
+<script type="text/javascript" src="../../assets/custom/base/base.utils.js" ></script>
+<script type="text/javascript" src = "../../assets/custom/base/base.ajax.js"></script>
+<!--end::Base Scripts -->
+
+<!--begin::Page Snippets -->
+<script src="login.js" type="text/javascript"></script>
+
+<!--end::Page Snippets -->
+</body>
+
+<!-- end::Body -->
+</html>

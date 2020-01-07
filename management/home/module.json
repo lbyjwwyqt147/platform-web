@@ -1,0 +1,128 @@
+{
+  "data": [{
+    "children": [{
+      "functionButtonGroup": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
+      "id": 10,
+      "menuIcon": "la-outdent",
+      "menuOpenUrl": "../dict/dict.html",
+      "moduleCode": "10011",
+      "moduleName": "数据字典",
+      "modulePid": 1,
+      "moduleType": 2,
+      "status": 0
+    }, {
+      "functionButtonGroup": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
+      "id": 11,
+      "menuIcon": "la-outdent",
+      "menuOpenUrl": "../organization/organization.html",
+      "moduleCode": "10024",
+      "moduleName": "组织机构",
+      "modulePid": 1,
+      "moduleType": 2,
+      "status": 0
+    }],
+    "id": 1,
+    "menuIcon": "flaticon-cogwheel",
+    "menuOpenUrl": "",
+    "moduleCode": "1001",
+    "moduleName": "系统设置",
+    "modulePid": 0,
+    "moduleType": 1,
+    "status": 0
+  },{
+    "children": [
+      {
+        "functionButtonGroup": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
+        "id": 60,
+        "menuIcon": "la-outdent",
+        "menuOpenUrl": "../authorize/role/role.html",
+        "moduleCode": "10021",
+        "moduleName": "角色",
+        "modulePid": 6,
+        "moduleType": 2,
+        "status": 0
+      },{
+        "functionButtonGroup": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
+        "id": 61,
+        "menuIcon": "la-outdent",
+        "menuOpenUrl": "../authorize/position/position.html",
+        "moduleCode": "10022",
+        "moduleName": "岗位",
+        "modulePid": 6,
+        "moduleType": 2,
+        "status": 0
+      }, {
+        "functionButtonGroup": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
+        "id": 62,
+        "menuIcon": "la-outdent",
+        "menuOpenUrl": "../authorize/menu/menu.html",
+        "moduleCode": "10023",
+        "moduleName": "资源",
+        "modulePid": 6,
+        "moduleType": 2,
+        "status": 0
+      }, {
+        "functionButtonGroup": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
+        "id": 63,
+        "menuIcon": "la-outdent",
+        "menuOpenUrl": "../authorize/roleResource/roleResource.html",
+        "moduleCode": "10025",
+        "moduleName": "角色资源",
+        "modulePid": 6,
+        "moduleType": 2,
+        "status": 0
+      }, {
+        "functionButtonGroup": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
+        "id": 64,
+        "menuIcon": "la-outdent",
+        "menuOpenUrl": "../authorize/roleUser/roleUser.html",
+        "moduleCode": "10026",
+        "moduleName": "人员角色",
+        "modulePid": 6,
+        "moduleType": 2,
+        "status": 0
+      }],
+    "id": 6,
+    "menuIcon": "flaticon-calendar-3",
+    "menuOpenUrl": "",
+    "moduleCode": "1002",
+    "moduleName": "权限管理",
+    "modulePid": 0,
+    "moduleType": 1,
+    "status": 0
+  },{
+    "children": [{
+      "functionButtonGroup": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
+      "id": 30,
+      "menuIcon": "la-outdent",
+      "menuOpenUrl": "../../management/user/user.html",
+      "moduleCode": "10031",
+      "moduleName": "账户管理",
+      "modulePid": 3,
+      "moduleType": 2,
+      "status": 0
+    },{
+      "functionButtonGroup": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
+      "id": 31,
+      "menuIcon": "la-outdent",
+      "menuOpenUrl": "../../management/tenement/tenement.html",
+      "moduleCode": "10032",
+      "moduleName": "租户管理",
+      "modulePid": 3,
+      "moduleType": 2,
+      "status": 0
+    }],
+    "id": 3,
+    "menuIcon": "flaticon-users",
+    "menuOpenUrl": "",
+    "moduleCode": "1003",
+    "moduleName": "用户管理",
+    "modulePid": 0,
+    "moduleType": 1,
+    "status": 0
+  }],
+  "message": "success.",
+  "status": 200,
+  "success": true,
+  "timestamp": "2019-03-16 08:24:48"
+}

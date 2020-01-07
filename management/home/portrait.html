@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="A simple jQuery image cropping plugin.">
+    <meta name="author" content="Chen Fengyuan">
+    <title>Cropper</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="icon" href="favicon.ico">
+    <link href="../../assets/custom/plugins/font-awesome-4.7.0\css\font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/custom/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../../assets/custom/plugins/cropper/cropper.min.css" type="text/css">
+    <link rel="stylesheet" href="../../assets/custom/plugins/cropper/cropper.main.css" type="text/css">
+
+    <style>
+        .m-blockui {
+            background-color: rgba(240,248,255,0.5);
+        }
+
+    </style>
+</head>
+<body>
+
+<!-- Content -->
+<div class="container" style="margin-left: 5px;">
+    <div class="row" style="padding-top: 10px">
+        <div class="col-md-9">
+            <!-- <h3>Demo:</h3> -->
+            <div class="img-container">
+                <img id="head_portrait_image" src="../../assets/custom/images/user/profile-photo.jpg" alt="图片" style="width: 100%">
+            </div>
+        </div>
+        <div class="col-md-3">
+            <!-- <h3>Preview:</h3> -->
+            <div class="docs-preview clearfix">
+                <div class="img-preview preview-lg" style="margin-bottom: 20px;"></div>
+                <div class="img-preview preview-md"  style="margin-bottom: 20px;"></div>
+                <div class="img-preview preview-sm" style="margin-bottom: 125px;"></div>
+                <div class="alert alert-warning" role="alert" id="no-select-image" style="display: none">
+                    请选择图片.
+                </div>
+                <div class="alert alert-warning" role="alert" id="up-error" style="display: none">
+                    上传头像失败,请重试.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-9 docs-buttons">
+            <div class="btn-group  docs-toggles" data-toggle="buttons" style="margin-bottom: inherit;">
+                <label class="btn btn-info">
+                    <input type="radio" class="sr-only" id="aspectRatio0" name="aspectRatio" value="1.7777777777777777">
+                    <span class="docs-tooltip" data-toggle="tooltip" data-animation="false" title="" data-original-title="比例: 16:9">
+                      16:9
+                    </span>
+                </label>
+                <label class="btn btn-info active">
+                    <input type="radio" class="sr-only" id="aspectRatio1" name="aspectRatio" value="1.3333333333333333">
+                    <span class="docs-tooltip" data-toggle="tooltip" data-animation="false" title="" data-original-title="比例: 4:3">
+                      4:3
+                    </span>
+                </label>
+                <label class="btn btn-info" >
+                    <input type="radio" class="sr-only" id="aspectRatio2" name="aspectRatio" value="1">
+                    <span class="docs-tooltip" data-toggle="tooltip" data-animation="false" title="" data-original-title="比例: 1:1">
+                      1:1
+                    </span>
+                </label>
+                <label class="btn btn-info">
+                    <input type="radio" class="sr-only" id="aspectRatio3" name="aspectRatio" value="0.6666666666666666">
+                    <span class="docs-tooltip" data-toggle="tooltip" data-animation="false" title="" data-original-title="比例: 2:3">
+                      2:3
+                    </span>
+                </label>
+            </div>
+            <div class="btn-group">
+                <button type="button" class="btn btn-info" data-method="zoom" data-option="0.1" title="放大">
+                    <span class="docs-tooltip" data-toggle="tooltip" data-animation="false" title="放大">
+                      <span class="fa fa-search-plus"></span>
+                    </span>
+                </button>
+                <button type="button" class="btn btn-info" data-method="zoom" data-option="-0.1" title="缩小">
+                    <span class="docs-tooltip" data-toggle="tooltip" data-animation="false" title="缩小">
+                      <span class="fa fa-search-minus"></span>
+                    </span>
+                </button>
+            </div>
+
+            <div class="btn-group">
+                <button type="button" class="btn btn-info" data-method="move" data-option="-10" data-second-option="0" title="左移">
+                    <span class="docs-tooltip" data-toggle="tooltip" data-animation="false" title="左移">
+                      <span class="fa fa-arrow-left"></span>
+                    </span>
+                </button>
+                <button type="button" class="btn btn-info" data-method="move" data-option="10" data-second-option="0" title="右移">
+            <span class="docs-tooltip" data-toggle="tooltip" data-animation="false" title="右移">
+              <span class="fa fa-arrow-right"></span>
+            </span>
+                </button>
+                <button type="button" class="btn btn-info" data-method="move" data-option="0" data-second-option="-10" title="上移">
+                    <span class="docs-tooltip" data-toggle="tooltip" data-animation="false" title="上移">
+                      <span class="fa fa-arrow-up"></span>
+                    </span>
+                </button>
+                <button type="button" class="btn btn-info" data-method="move" data-option="0" data-second-option="10" title="下移">
+                    <span class="docs-tooltip" data-toggle="tooltip" data-animation="false" title="下移">
+                      <span class="fa fa-arrow-down"></span>
+                    </span>
+                </button>
+            </div>
+
+            <div class="btn-group">
+                <button type="button" class="btn btn-info" data-method="rotate" data-option="-45" title="左旋转">
+                    <span class="docs-tooltip" data-toggle="tooltip" data-animation="false" title="左旋转">
+                      <span class="fa fa-rotate-left"></span>
+                    </span>
+                </button>
+                <button type="button" class="btn btn-info" data-method="rotate" data-option="45" title="右旋转">
+                    <span class="docs-tooltip" data-toggle="tooltip" data-animation="false" title="右旋转">
+                      <span class="fa fa-rotate-right"></span>
+                    </span>
+                </button>
+            </div>
+
+            <div class="btn-group">
+                <button type="button" class="btn btn-info" data-method="reset" title="重置">
+                    <span class="docs-tooltip" data-toggle="tooltip" data-animation="false" title="重置">
+                      <span class="fa fa-refresh"></span>
+                    </span>
+                </button>
+                <label class="btn btn-info btn-upload" for="inputImage" title="选择头像图片">
+                    <input type="file" class="sr-only" id="inputImage" name="file" accept=".jpg,.jpeg,.png,.gif,.bmp,.tiff">
+                    <span class="docs-tooltip" data-toggle="tooltip" data-animation="false" title="选择头像图片">
+                      选择图片
+                    </span>
+                </label>
+            </div>
+        </div>
+        <!-- /.docs-buttons -->
+        <div class="col-md-3 docs-toggles">
+            <a href="#" id="portait_up-btn-ok" class="btn btn-info btn-block" data-animation="false" title="" >保存头像</a>
+        </div>
+    </div>
+</div>
+
+
+<!-- Scripts -->
+<script type="text/javascript" src="../../assets/custom/plugins/jquery/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="../../assets/custom/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="../../assets/theme/default/vendors/base/vendors.bundle.js"></script>
+<script type="text/javascript" src="../../assets/theme/default/vendors/base/scripts.bundle.js"></script>
+<script type="text/javascript" src = "../../assets/custom/plugins/jsencrypt/aes.js"></script>
+<script type="text/javascript" src = "../../assets/custom/plugins/jsencrypt/crypto-js.js"></script>
+<script type="text/javascript" src = "../../assets/custom/plugins/jsencrypt/mode-ecb.js"></script>
+<script type="text/javascript" src = "../../assets/custom/plugins/jsencrypt/pad-zeropadding.js"></script>
+<script type="text/javascript" src="../../assets/custom/plugins/cropper/cropper.min.js"></script>
+<script type="text/javascript" src="../../assets/custom/base/base.utils.js" ></script>
+<script type="text/javascript" src="../../assets/custom/plugins/cropper/cropper.main.js"></script>
+
+</body>
+</html>
